@@ -1,0 +1,102 @@
+.container{
+	/*position: relative;*/
+	position: relative;
+	top: 10px;
+	padding: 20px;
+}
+
+article{
+
+position: relative;
+/*top: 200px;*/
+z-index: -1;
+background-color: rgb(200,200,200);
+overflow: hidden;
+padding: 40px;
+width: 400px;
+margin-bottom: 20px;
+box-sizing: border-box;
+}
+
+
+article img{
+	width: 200px;
+	/*float:left;*/
+	margin-right: 20px;
+
+}
+
+
+.flexbox{
+	clear: both;
+	display: flex;
+	/*flex-wrap: wrap;*/
+	/*flex-flow: row-reverse;*/
+	flex-direction: column;
+	width: 50%;
+	height: 200px;
+	background-color: grey;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 200px;
+}
+
+
+.flexbox box {
+	padding: 20px;
+	flex: 0 0 50px;
+	border: 1px solid black;
+	background-color: yellow;
+} 
+
+.flexbox .first {
+	flex: 0 0 50px;
+}
+
+.flexbox .second {
+	flex: 0 0 100px;
+}
+
+
+
+
+.grid{
+	display: grid;
+	grid-template-columns: 100px 1fr 2fr;
+	background-color: lightgrey;
+	grid-gap: 10px;
+}
+
+
+.grid box{
+	padding: 20px;
+	border: 1px solid black;
+	background-color: yellow;
+
+}
+
+.grid box:nth-child(even){
+	background-color: lightsteelblue;
+}
+
+.grid .second{
+	/*grid-column: 3/3;*/
+	/*grid-row: 2/3;*/
+}
+
+
+@media screen and (min-width: 600px){
+
+.flexbox{
+	flex-direction: row;
+}
+
+}
+
+@media screen and (min-width: 800px){
+
+.flexbox{
+	display: none;
+}
+
+}
